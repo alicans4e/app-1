@@ -1,28 +1,15 @@
+import { Heading, BodyText } from '@/shared-components';
+
 export default function Home() {
   return (
-    <main style={{
-      display: 'flex',
-      minHeight: '100vh',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '24px'
-    }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{
-          fontSize: '2.5rem',
-          fontWeight: 'bold',
-          marginBottom: '16px',
-          color: '#333'
-        }}>
-          Hello World!
-        </h1>
-        <p style={{
-          fontSize: '1.125rem',
-          color: '#666'
-        }}>
-          Welcome to Next.js 14
-        </p>
+    <main className="flex min-h-screen flex-col items-center justify-center p-6">
+      <div className="text-center">
+        <Heading variant="h1" color="primary" gutterBottom>
+          Welcome to My App
+        </Heading>
+        <BodyText variant="body1" color="inherit" paragraph>
+          This text uses the shared typography components from the submodule.
+        </BodyText>
       </div>
     </main>
   );
